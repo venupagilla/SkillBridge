@@ -11,7 +11,7 @@ async def parse_skills(
     job_description: str = Form(...)
 ):
     """
-    Parses a resume and job description to find missing skills using Google Gemini.
+    Parses a resume and job description to find missing skills using local Ollama model.
     """
     if not resume.filename.endswith(('.pdf', '.docx', '.txt')):
          raise HTTPException(status_code=400, detail="Invalid file format. Please upload PDF, DOCX, or TXT.")

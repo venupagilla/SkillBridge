@@ -20,7 +20,7 @@ SkillBridge is a comprehensive full-stack web application designed to bridge the
 *   **Framework**: [FastAPI](https://fastapi.tiangolo.com/)
 *   **Language**: Python 3.x
 *   **Database**: PostgreSQL (via SQLModel/SQLAlchemy)
-*   **AI Integration**: Google Gemini API
+*   **AI Integration**: Ollama (Local LLM)
 
 ### DevOps
 *   **Containerization**: Docker & Docker Compose
@@ -33,8 +33,18 @@ Follow these instructions to get the project up and running on your local machin
 *   Node.js (v18+)
 *   Python (v3.9+)
 *   PostgreSQL (or Docker)
+*   [Ollama](https://ollama.com/) (for local AI)
 
-### 1. Backend Setup
+### 1. AI Setup (Ollama)
+
+1.  Download and install [Ollama](https://ollama.com/).
+2.  Pull the required model (default is `phi`):
+    ```bash
+    ollama pull phi
+    ```
+3.  Ensure Ollama is running (`ollama serve`).
+
+### 2. Backend Setup
 
 Navigate to the backend directory and set up the environment.
 
